@@ -5,9 +5,12 @@ on:
     - cron: '0 16 * * *'  # 每天凌晨 12:00 UTC 运行
   workflow_dispatch:  # 手动触发
 
+env:
+ name: A
+
 jobs:
   build-and-run:
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
